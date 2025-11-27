@@ -1,1 +1,1 @@
-# life
+# Welcome to my LIFE project
