@@ -1,0 +1,206 @@
+/*初始化*/
+body {
+    background-color: lightyellow;
+    
+}
+h1 {
+    color: #ff9999;
+}
+h2 {
+    color: #746658;
+}
+h3 {
+    color: #b3b3ff;
+}
+hr {
+    border-style: dashed;
+    border-width: 3px;
+    border-color: #bfbfbf;
+}
+h5{
+    border-left: 5px solid #b37700;
+    color: #ffb3b3;
+    
+}
+/*滑鼠觸碰變色*/
+h1:hover{
+    color:#ffb3b3;
+}
+ h2:hover{
+    color:#805500;
+}
+ h6:hover{
+    color:#737373;
+}
+button:hover{
+    color:#b3b3b3;
+}
+h5:hover{
+    color:gray;
+}
+li:hover{
+    color:#ffb3b3 ;
+}
+/*按鈕*/
+.all {
+    width: 60px;
+    height: 30px;
+    background-color: #ccccff;
+    border-color: #ccccff;
+    border-radius: 5px;
+}
+.button-1 {
+    width: 100px;
+    height: 30px;
+    background-color: #ffdd99;
+    border-color: #ffdd99;
+    border-radius: 5px;
+
+}
+.button-2 {
+    width: 150px;
+    height: 30px;
+    background-color:  #ffb399;
+    border-color:  #ffb399;
+    border-radius: 5px;
+}
+.button-3 {
+    width: 120px;
+    height: 30px;
+    background-color: #df9f9f;
+    border-color:#df9f9f;
+    border-radius: 5px;
+}
+.button-4 {
+    width: 180px;
+    height: 30px;
+    background-color: #ccccb3;
+    border-color: #ccccb3;
+    border-radius: 5px;
+}
+.button-5 {
+    width: 180px;
+    height: 30px;
+    background-color: #cceeff;
+    border-color: #cceeff;
+    border-radius: 5px;
+}
+
+/*心路歷程*/
+.timeline-small {
+    font-family: 'Open Sans', sans-serif;
+}
+.timeline-small-body ul {
+    padding: 1em 0 0 2em;
+    margin: 0;
+    list-style: none;
+    position: relative;
+}
+.timeline-small-body ul::before {
+    content: ' ';
+    height: 100%;
+    width: 5px;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 0;
+    left: 2.4em;
+    z-index: -1;
+}
+.timeline-small-body li div {
+    display: inline-block;
+    margin: 1em 0;
+    vertical-align: top;
+}
+.timeline-small-body .bullet {
+    width: 1rem;
+    height: 1rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 1;
+    margin-right: 1rem;
+    margin-top: 7%;
+}
+.timeline-small-body .bullet.pink {
+    background-color: #ffffb3;
+
+}
+.timeline-small-body .bullet.green {
+    background-color: #b3ffff;
+
+}
+.timeline-small-body .bullet.blue {
+    background-color: #e6ffe6;
+
+}
+.timeline-small-body .bullet.orange {
+    background-color: #ffbf80;
+
+}
+.timeline-small-body .date {
+    width: 23%;
+    font-size: 0.75em;
+    padding-top: 0.40rem;
+    padding-right: 2rem;
+}
+.timeline-small-body .desc {
+    width: 50%;
+}
+.timeline-small-body h3 {
+    font-size: 0.9em;
+    font-weight: 400;
+    margin: 0;
+}
+.timeline-small-body h4 {
+    margin: 0;
+    font-size: 0.7em;
+    font-weight: 400;
+    color: #808080;
+}
+/*想對張先生說的話*/
+.talk {
+    border-style: none;
+    border-width: 4px;
+}
+.button{
+    
+    border-style: none;
+    margin: 5px;
+    
+}
+
+li#love{
+    --icon-space:0.3rem;
+    list-style-image: url(heart.png);
+   border-left: 5px solid #e6ccb3;
+    
+}
+li#lover{
+    --icon-space:0.3rem;
+    list-style-image: url(lover.png);
+   border-left: 5px solid #ffcccc;
+    text-align: left;
+}
+.oo{
+    text-align: left;
+}
+.o{
+    text-align: left;
+}
+.ooo{
+    width: 180px;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #a3a375;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+
+    
+
+
+
+
