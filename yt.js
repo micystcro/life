@@ -133,19 +133,35 @@ document.addEventListener('DOMContentLoaded', () => {
     updateNavPlacement();
     window.addEventListener('resize', updateNavPlacement);
 
-    // 卡片淡入效果（維持原先的可見判斷）
-    function checkCards() {
-        cards.forEach(card => {
-            const rect = card.getBoundingClientRect();
-            if (rect.left < window.innerWidth - 50 && rect.right > 50) {
-                card.classList.add('show');
-            }
+    // 卡片淡入效果：使用 IntersectionObserver 檢查卡片是否進入 wrapper 的可視範圍
+    // 這比使用 window 的 bounding rect 更穩定，能正確處理水平滾動容器
+    if ('IntersectionObserver' in window && wrapper) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            root: wrapper,
+            rootMargin: '0px',
+            threshold: 0.1
         });
-    }
 
-    // 初始檢查與監聽（若 wrapper 為 null，則跳過）
-    checkCards();
-    if (wrapper) wrapper.addEventListener('scroll', checkCards);
+        cards.forEach(card => observer.observe(card));
+    } else {
+        // fallback: 使用簡單的檢查函式（若沒有 IntersectionObserver 或 wrapper 為 null）
+        function checkCards() {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                if (rect.left < window.innerWidth - 50 && rect.right > 50) {
+                    card.classList.add('show');
+                }
+            });
+        }
+        checkCards();
+        if (wrapper) wrapper.addEventListener('scroll', checkCards);
+    }
 
     // --- 在窄螢幕時禁止使用者以滑鼠/手勢左右拖動，仍保留按鈕可程式滾動 ---
     // 決定何時視為「窄螢幕」，可以調整此閾值
